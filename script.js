@@ -1,5 +1,6 @@
 
-document.getElementById("button").addEventListener('click',function(){
+document.getElementById("button").addEventListener('click',function(e){
+	e.preventDefault();
 	let name = document.getElementById("name").value;
     let year = document.getElementById("year").value;
     

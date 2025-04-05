@@ -6,15 +6,12 @@ document.getElementById("button").addEventListener('click',function(e){
     
 	let  url = `https://localhost:8080/`;
 	
-	// let url = document.getElementById("url");
-	if(name){
-		url+=`?name=${name}`;
-	}
-	if(year){
-		url+=`?year=${year}`;
-	}
-	if(year && name){
-		url+=`?name=${name}&year=${year}`;
+	if (name && year) {
+		url += `?name=${name}&year=${year}`;
+	} else if (name) {
+		url += `?name=${name}`;
+	} else if (year) {
+		url += `?year=${year}`;
 	}
 
 	document.getElementById("url").innerHTML=url;
